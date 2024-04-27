@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace backendCherryPicker.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("dates")]
     public class DateController : ControllerBase
     {
         private readonly IDateService _dateService;

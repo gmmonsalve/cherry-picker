@@ -30,12 +30,26 @@ builder.Services.AddScoped<IDateService, DateService>();
 //Put services before this line
 var app = builder.Build();
 
+//TODO: Revisar por qué no funciona
+app.UseRouting();
+
+app.UseEndpoints(endpoints =>
+{
+    _ = endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "api/v1/{controller}/{action}/{id?}");
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+if(!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
 }
 
 app.UseHttpsRedirection();
