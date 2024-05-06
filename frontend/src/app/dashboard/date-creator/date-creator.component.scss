@@ -1,0 +1,30 @@
+@import "../../../../src/styles.scss";
+
+.date-creator{
+  border-radius: 30px;
+  box-shadow: 0 2px 4px $quinary-color;
+  padding: 20px;
+  width: 100%;
+  background-color: $secondary-color;
+  color: $tertiary-color;
+}
+
+#create-form{
+    width: 50%;
+}
+
+#create-form{
+  width: 50%;
+}
+
+#dateInputText{
+  border: none;
+  border-bottom: 1px solid $tertiary-color;
+  transition: border-bottom 0.2s ease-in-out;
+  background-color: transparent;
+}
+
+#dateInputText:focus {
+  outline: none;
+  border-bottom: 2px solid $primary-color;
+}
