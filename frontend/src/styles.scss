@@ -1,5 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap');
+
+$primary-color: #C91959;
+$secondary-color: #EBD1EA;
+$tertiary-color: #E14591;
+$quaternary-color: #52A051;
+$quinary-color: #640007;
+
 body {
+  font-family: "Cherry Swash", serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 0;
+  background-color: $tertiary-color;
+  color: $secondary-color;
+}
+
+.flex{
+  display: flex;
+}
+
+.justify-center{
+  justify-content: center;
 }
