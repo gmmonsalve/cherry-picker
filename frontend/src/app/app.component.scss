@@ -1,8 +1,26 @@
+@import '../styles.scss';
+
+header{
+  background-color: $primary-color;
+  position: relative;
+  display: inline-block;
+  top: 0;
+  width: 100%;
+  margin-bottom: 5vh;
+
+  .logo {
+    font-weight: 800;
+    color: $secondary-color;
+  }
+}
+
+
+
 footer{
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #C91959;
+  background-color: $quinary-color;
   margin: 0;
   padding: 0;
   color: #EBD1EA;
