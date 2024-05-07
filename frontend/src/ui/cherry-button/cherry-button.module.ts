@@ -10,6 +10,7 @@ import { CherryButtonDirective } from './cherry-button.directive';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [CherryButtonDirective]
 })
 export class CherryButtonModule { }

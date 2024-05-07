@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DateComponent } from './date/date.component';
 import { DateCreatorComponent } from './date-creator/date-creator.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { CherryButtonModule } from '../../ui/cherry-button/cherry-button.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    CherryButtonModule
   ]
 })
 export class DashboardModule { }
