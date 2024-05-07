@@ -6,14 +6,9 @@ namespace backendCherryPicker.Controllers
 {
     [ApiController]
     [Route("/date")]
-    public class DateController : ControllerBase
+    public class DateController(IDateService dateService) : ControllerBase
     {
-        private readonly IDateService _dateService;
-
-        public DateController(IDateService dateService)
-        {
-            _dateService = dateService;
-        }
+        private readonly IDateService _dateService = dateService;
 
         [HttpGet(Name = "GetAllDates")]
         public async Task<IEnumerable<Date>> GetAllDates() 
