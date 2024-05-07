@@ -33,21 +33,16 @@ var app = builder.Build();
 //TODO: Revisar por qué no funciona
 app.UseRouting();
 
-app.UseEndpoints(endpoints =>
-{
-    _ = endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "api/v1/{controller}/{action}/{id?}");
-});
 
+
+app.UseSwagger();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-if(!app.Environment.IsDevelopment())
+if (!app.Environment.IsDevelopment())
 {
     app.UseHttpsRedirection();
 }
