@@ -3,9 +3,13 @@
     <div class="flex justify-center">
       <form id="create-form">
         <div class="date-creator">
-          <label for="dateTitle">Date idea</label>
-          <input type="text" id="dateInputText" name="dateTitle" required>
-          <button type="submit">Create</button>
+          <label for="dateTitle"></label>
+          <input type="text" id="dateInputText" name="dateTitle" placeholder="Date title"
+            required aria-roledescription="campo para la descripción breve de la cita">
+        </div>
+        <div class="create-button">
+          <button type="submit" cherry-button
+            aria-roledescription="boton para crear cita">Create</button>
         </div>
       </form>
     </div>
