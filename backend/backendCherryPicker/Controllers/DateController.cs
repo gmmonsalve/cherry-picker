@@ -16,6 +16,12 @@ namespace backendCherryPicker.Controllers
             return await _dateService.GetAllDatesAsync();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateDate([FromBody] Date date)
+        {
+            await _dateService.CreateDateAsync(date);
+            return Ok();
+        }
 
     }
 }
