@@ -14,8 +14,9 @@ export class CherryButtonDirective {
     this.renderer.setStyle(this.el.nativeElement, 'border', 'none');
     this.renderer.setStyle(this.el.nativeElement, 'padding', '10px');
     this.renderer.setStyle(this.el.nativeElement, 'cursor', 'pointer');
-    this.renderer.setStyle(this.el.nativeElement, 'width', '100%');
+    this.renderer.setStyle(this.el.nativeElement, 'width', 'auto');
     this.renderer.setStyle(this.el.nativeElement, 'height', '100%');
+
   }
 
 }
