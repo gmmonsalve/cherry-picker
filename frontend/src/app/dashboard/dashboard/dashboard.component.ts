@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Date } from 'src/app/core/interfaces/date.interface';
+import { CherryService } from 'src/app/core/services/cherry-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private cherryService: CherryService) { }
+
+  dateList$: Observable<Date[]> | null = null;
 
   ngOnInit(): void {
+    this.getAllDates();
+  }
+
+  getAllDates(): void {
+    this.dateList$ = this.cherryService.getDates()
   }
 
 }

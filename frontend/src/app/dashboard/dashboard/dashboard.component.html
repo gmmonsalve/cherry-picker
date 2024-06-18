@@ -11,8 +11,8 @@
 <section>
   <article>
     <h2>Available Dates Ideas</h2>
-    <ng-container>
-      <date-component></date-component>
+    <ng-container *ngFor="let date of dateList$ | async">
+      <date-component [date]="date"></date-component>
     </ng-container>
   </article>
 </section>
