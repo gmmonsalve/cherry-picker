@@ -1,18 +1,15 @@
-<date-creator></date-creator>
+<date-creator (dateCreated)="getAllDates()"></date-creator>
 
 <section>
   <article>
-    <form>
-      <button type="submit">Cherry-pick date!</button>
-    </form>
-  </article>
-</section>
-
-<section>
-  <article>
-    <h2>Available Dates Ideas</h2>
-    <ng-container *ngFor="let date of dateList$ | async">
-      <date-component [date]="date"></date-component>
-    </ng-container>
+    <h2 class="text-center">Available Dates Ideas</h2>
+    <div class="flex justify-center">
+      <button type="submit" cherry-button>Cherry-pick date!</button>
+    </div>
+    <div class="grid-dates">
+      <ng-container *ngFor="let date of dateList$ | async">
+          <date-card [date]="date"></date-card>
+      </ng-container>
+    </div>
   </article>
 </section>

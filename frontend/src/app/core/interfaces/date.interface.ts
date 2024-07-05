@@ -2,6 +2,6 @@
  * Interface for lovely date idea
  */
 export interface Date {
-  id: number,
+  id?: number,
   title: string
 }
