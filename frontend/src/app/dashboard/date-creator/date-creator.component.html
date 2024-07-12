@@ -4,12 +4,12 @@
       <form id="create-form">
         <div class="date-creator">
           <label for="dateTitle"></label>
-          <input type="text" id="dateInputText" name="dateTitle" placeholder="Date title"
+          <input [(ngModel)]="date" type="text" id="dateInputText" name="dateTitle" placeholder="Date title"
             required aria-roledescription="campo para la descripción breve de la cita">
         </div>
         <div class="create-button">
           <button type="submit" cherry-button
-            aria-roledescription="boton para crear cita">Create</button>
+            aria-roledescription="boton para crear cita" (click)="create()">Create</button>
         </div>
       </form>
     </div>

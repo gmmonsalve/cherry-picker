@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Date } from 'src/app/core/interfaces/date.interface';
 
 @Component({
-  selector: 'date-component',
+  selector: 'date-card',
   templateUrl: './date.component.html',
   styleUrls: ['./date.component.scss']
 })

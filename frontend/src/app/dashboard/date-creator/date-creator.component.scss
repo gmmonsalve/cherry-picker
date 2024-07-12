@@ -10,7 +10,7 @@
 }
 
 .create-button{
-  width: 20%;
+  width: fit-content;
   align-self: center;
   margin-left: 10px;
   height: 100%;
@@ -22,6 +22,7 @@
 
 #create-form{
   display: flex;
+  justify-content: center;
   width: 50%;
 }
 
