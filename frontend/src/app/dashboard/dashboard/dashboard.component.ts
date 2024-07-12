@@ -24,4 +24,5 @@ export class DashboardComponent implements OnInit {
     this.dateList$ = this.cherryService.getDates()
   }
 
+  
 }

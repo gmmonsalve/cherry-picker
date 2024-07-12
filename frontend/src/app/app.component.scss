@@ -1,7 +1,7 @@
 @import '../styles.scss';
 
 header{
-  background-color: $primary-color;
+ /*  background-color: $primary-color; */
   position: relative;
   display: inline-block;
   top: 0;
@@ -11,10 +11,9 @@ header{
   .logo {
     font-weight: 800;
     color: $secondary-color;
+    padding-left: 30px;
   }
 }
-
-
 
 footer{
   position: fixed;
