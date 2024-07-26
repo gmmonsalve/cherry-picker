@@ -22,4 +22,10 @@ export class CherryService {
    return this.http.post(this.apiEndpoint + DateRoutes.dates, date)
   }
 
+   pickRandomDate(dates: Date[]): Date{
+    const limit = dates.length - 1;
+    const randomIndex =  Math.floor(Math.random() * limit)
+    return dates[randomIndex]
+   }
+
 }

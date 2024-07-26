@@ -4,7 +4,12 @@
   <article>
     <h2 class="text-center">Available Dates Ideas</h2>
     <div class="flex justify-center">
-      <button type="submit" cherry-button>Cherry-pick date!</button>
+      <button type="submit" cherry-button (click)="pickDate()">Cherry-pick date!</button>
+    </div>
+    <div *ngIf="pickedDate" id="picked-card-container">
+      <div id="picked-card">
+        <date-card [date]="pickedDate"></date-card>
+      </div>
     </div>
     <div class="grid-dates">
       <ng-container *ngFor="let date of dateList$ | async">
