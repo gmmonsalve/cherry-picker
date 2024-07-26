@@ -1,5 +1,3 @@
-
-
 .grid-dates{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -7,4 +5,17 @@
   color: #E14591;
   text-align: center;
   padding: 5%;
+}
+
+#picked-card-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#picked-card{
+  width: 25%;
+  text-align: center;
+  font-size: 2.5em;
+  color:#E14591;
 }

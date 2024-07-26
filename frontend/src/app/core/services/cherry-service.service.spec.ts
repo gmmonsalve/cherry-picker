@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CherryServiceService } from './cherry-service.service';
+import { CherryService } from './cherry-service.service';
 
 describe('CherryServiceService', () => {
-  let service: CherryServiceService;
+  let service: CherryService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CherryServiceService);
+    service = TestBed.inject(CherryService);
   });
 
   it('should be created', () => {
