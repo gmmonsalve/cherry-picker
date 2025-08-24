@@ -1,0 +1,135 @@
+:root{
+  --cherry-primary: #a24164
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+main,
+article{
+    height: 100%;
+}
+
+body{
+ background: url("../static/fondo.jpg");
+ background-size: cover;
+ padding: 1rem;
+}
+
+main{
+  border: 2px dashed var(--cherry-primary);
+}
+
+h1, 
+h2, 
+h3{
+  font-family: "Playwrite CA", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--cherry-primary);
+}
+
+h1{
+  font-size:  6rem;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+#cherry-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+
+button.cherry-button{
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--cherry-primary);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  min-width: 200px;
+  max-height: 50px;
+  font-size: medium;
+}
+
+input.cherry-input{
+  padding: 1rem;
+  border-radius: 50px;
+  border:  2px solid black;
+  min-width: 500px;
+  text-align: center;
+  color: var(--cherry-primary);
+}
+
+input.cherry-input::placeholder {
+  color: var(--cherry-primary);
+  opacity: 1; 
+}   
+
+input.cherry-input:focus {
+  border: 2px solid var(--cherry-primary);
+  outline: none;
+}
+
+input.cherry-input + span{
+  display: block;
+}
+
+/* utility classes */
+
+.text-center{
+  text-align: center;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.align-self-center{
+  align-self: center;
+}
+
+.gap-1{
+  gap: 1rem;
+}
+
+.teacher-font{
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*  */
+
+.cherry-button:hover{
+  background-color: var(--cherry-primary);
+}
+
+#app-content{
+  padding: 2rem;
+}
+
