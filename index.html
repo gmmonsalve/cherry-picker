@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/index.css">
+    <script src="./src/app.js" type="module"></script>
+    <title>Cherry Picker</title>
+</head>
+<body>
+    <main>
+        <header id="cherry-header">
+            <h1>Cherry picker</h1>
+            <button id="init-button" class="cherry-button teacher-font" type="button">Empezar</button>
+        </header>
+        <article id="app-content" hidden>
+            <section class="container justify-center">
+                <form id="cherry-date-form" class="d-flex gap-1">
+                    <div>
+                        <input class="cherry-input teacher-font" type="text" placeholder="Escribe tu idea de cita" maxlength="80" />
+                        <span class="teacher-font text-center">Mantenlo corto, conciso e interesante</span>
+                    </div>
+                    <button id="add-date" class="cherry-button teacher-font text-center" type="submit">Añadir cita</button>
+                </form>
+            </section>
+            <section class="d-flex gap-1">
+                <h2>Tus citas</h2>
+                <button id="pick-date-button" class="cherry-button teacher-font align-self-center" type="button">Eligir al azar</button>
+            </section>
+            <section id="cherry-dates-container">
+
+            </section>
+        </article>
+    </main>
+    <template id="date-envelope">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="-34.0 -9.3 705.0 457.4" zoomAndPan="magnify" style="fill: rgb(0, 0, 0);" original_string_length="2800" width="209.17352541589904px" height="135.59191647527072px"><defs><filter xmlns:xlink="http://www.w3.org/1999/xlink" id="__id0_s92p6534o" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple"><feGaussianBlur stdDeviation=".06"/></filter><filter xmlns:xlink="http://www.w3.org/1999/xlink" id="__id1_s92p6534o" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple"><feGaussianBlur stdDeviation=".179"/></filter><filter xmlns:xlink="http://www.w3.org/1999/xlink" id="__id2_s92p6534o" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple"><feGaussianBlur stdDeviation=".06"/></filter><filter xmlns:xlink="http://www.w3.org/1999/xlink" id="__id3_s92p6534o" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple"><feGaussianBlur stdDeviation=".179"/></filter><filter xmlns:xlink="http://www.w3.org/1999/xlink" id="__id4_s92p6534o" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple"><feGaussianBlur stdDeviation=".21"/></filter><filter xmlns:xlink="http://www.w3.org/1999/xlink" id="__id5_s92p6534o" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple"><feGaussianBlur stdDeviation=".07"/></filter><filter xmlns:xlink="http://www.w3.org/1999/xlink" id="__id6_s92p6534o" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple"><feGaussianBlur stdDeviation=".35"/></filter></defs><g stroke-linecap="round" stroke-linejoin="round"><g id="__id7_s92p6534o"><rect filter="url(#__id6_s92p6534o)" height="378.28" rx=".2" ry=".2" width="584.61" x="27.929" y="31.945" style="fill: inherit;"/></g><g id="__id8_s92p6534o"><rect filter="url(#__id4_s92p6534o)" height="378.28" rx=".2" ry=".2" width="584.61" x="27.929" y="31.945" style="fill: inherit;"/></g><g id="__id9_s92p6534o"><rect filter="url(#__id5_s92p6534o)" height="378.28" rx=".2" ry=".2" width="584.61" x="24.49" y="28.506" style="fill: rgb(245, 246, 235);"/></g><g id="__id10_s92p6534o"><path d="m318.5 167.76c-11.414 0-282.62 223.41-290.16 238.57l290.16-67.477c96.144 20.393 195.05 53.246 290.16 67.477-7.5383-15.162-278.74-238.57-290.16-238.57z" filter="url(#__id1_s92p6534o)" style="fill: inherit;"/></g><g id="__id11_s92p6534o"><path d="m316.79 166.06c-11.414 0-282.62 223.41-290.16 238.57 1.2431 1.2426 2.3933 2.1493 4.2986 2.1493h571.71c1.9053 0 3.0555-0.90674 4.2986-2.1493-7.5383-15.162-278.74-238.57-290.16-238.57z" filter="url(#__id2_s92p6534o)" style="fill: rgb(245, 246, 235);"/></g><g id="__id12_s92p6534o"><path d="m28.342 32.375c7.5383 15.162 278.74 238.57 290.16 238.57 11.414 0 282.62-223.41 290.16-238.57l-290.15 71.095c-96.148-21.558-195.02-55.807-290.16-71.095z" filter="url(#__id3_s92p6534o)" style="fill: inherit;"/></g><g id="__id13_s92p6534o"><path d="m30.948 28.5c-1.905 0-3.0555 0.90568-4.2986 2.1493 7.5383 15.162 278.74 238.57 290.16 238.57 11.414 0 282.62-223.41 290.16-238.57-1.243-1.2436-2.3936-2.1493-4.2986-2.1493h-571.71z" filter="url(#__id0_s92p6534o)" style="fill: rgb(245, 246, 235);"/></g></g></svg>
+    </template>
+</body>
+</html>
