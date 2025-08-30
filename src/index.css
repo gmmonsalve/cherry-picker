@@ -1,5 +1,6 @@
 :root{
-  --cherry-primary: #a24164
+  --cherry-primary: #a24164;
+  --cherry-envelope: rgb(245, 246, 235);
 }
 
 * {
@@ -9,11 +10,17 @@
 }
 
 html,
-body,
-main,
-article{
-    height: 100%;
+body{
+  height: 100%;
 }
+
+
+main{
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 
 body{
  background: url("../static/fondo.jpg");
@@ -132,4 +139,38 @@ input.cherry-input + span{
 #app-content{
   padding: 2rem;
 }
+
+.cherry-date{
+  max-width: 200px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.cherry-date:hover #date-title {
+  display: block;
+}
+
+#cherry-dates-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+#date-title{
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  color: #a24164;       
+  font-size: 0.5rem;     
+  text-align: center;
+  width: 80%;        
+  z-index: 2;
+  background-color: var(--cherry-envelope);
+  padding: 0.5rem;
+}
+
 
