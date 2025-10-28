@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function initApp(){
     const Initbutton = document.getElementById('init-button')
     Initbutton.addEventListener('click', cherryPicker.redirectToApp)
-    cherryPicker.store.initializeStorage();
 }
 
 function renderAppContent(){
@@ -23,6 +22,7 @@ function renderAppContent(){
     const dateSection = document.getElementById("cherry-dates-container");
     const envelopeTemplate = document.getElementById("date-envelope");
     const appContent = document.getElementById("app-content");
+    const modalClose = document.getElementById("close-modal");
 
 
     removeHeaderComponent();
@@ -33,6 +33,17 @@ function renderAppContent(){
     if(cherryPicker.store.getStoredDates().length > 0){
         renderSavedDates(envelopeTemplate, dateSection);
     }
+    dateSection.addEventListener('click', (event) => {
+        const cherryDate = event.target.closest('.cherry-date');
+        if(!cherryDate) return;
+        const dateContent = cherryDate.querySelector('#date-title');
+        const textContent = dateContent.textContent;
+        openModal(textContent);
+    });
+    modalClose.addEventListener('click', () => {
+        console.log("closing modal");
+        closeModal();
+    });
 }
 
 function renderSavedDates(envelopeTemplate, dateSection){
@@ -41,6 +52,7 @@ function renderSavedDates(envelopeTemplate, dateSection){
         const envelope = createEnvelope(envelopeTemplate, date);
         dateSection.appendChild(envelope);
     });
+    
 }
 
 
@@ -68,4 +80,16 @@ function createEnvelope(envelopeTemplate, date){
 function removeHeaderComponent(){
     const header = document.getElementById("cherry-header");
     header.remove();
+}
+
+function openModal(dateContent){
+    const modalBackdrop = document.getElementById("modal-backdrop");
+    const modalContent = document.getElementById("picked-date-content");
+    modalContent.textContent = dateContent;
+    modalBackdrop.style.visibility = "visible";
+}
+
+function closeModal(){
+    const modalBackdrop = document.getElementById("modal-backdrop");
+    modalBackdrop.style.visibility = "hidden";
 }

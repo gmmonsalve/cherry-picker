@@ -1,6 +1,7 @@
 :root{
   --cherry-primary: #a24164;
   --cherry-envelope: rgb(245, 246, 235);
+  --cherry-backdrop: #a2416479;
 }
 
 * {
@@ -72,6 +73,17 @@ button.cherry-button{
   font-size: medium;
 }
 
+button.cherry-button-secondary{
+  color: var(--cherry-primary);
+  border: 2px solid var(--cherry-primary);
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  min-width: 200px;
+  max-height: 50px;
+  font-size: medium;
+}
+
 input.cherry-input{
   padding: 1rem;
   border-radius: 50px;
@@ -113,6 +125,10 @@ input.cherry-input + span{
 
 .justify-center{
   justify-content: center;
+}
+
+.align-items-center{
+  align-items: center;
 }
 
 .align-self-center{
@@ -168,9 +184,46 @@ input.cherry-input + span{
   font-size: 0.5rem;     
   text-align: center;
   width: 80%;        
-  z-index: 2;
+  z-index: 1;
   background-color: var(--cherry-envelope);
   padding: 0.5rem;
 }
 
 
+/* modal */
+
+#modal-backdrop{
+  position: fixed;
+  visibility: hidden;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--cherry-backdrop);
+  z-index: 2;
+}
+
+#modal-content{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: url("../static/modal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#close-modal{
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  font-size: 1.5rem;
+}
+
+#picked-date-content{
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+}
