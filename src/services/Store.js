@@ -1,14 +1,11 @@
 class Store{
 
     constructor(){}
-
-    initializeStorage(){
+  
+    getStoredDates(){
         if(!localStorage.getItem("myDates")){
             localStorage.setItem("myDates", JSON.stringify([]));
         }
-    }
-    
-    getStoredDates(){
         return JSON.parse(localStorage.getItem("myDates"));
     }
 
