@@ -33,12 +33,10 @@
                 <section class="d-flex gap-1">
                     <h2>Tus citas</h2>
                     <button id="pick-date-button" class="cherry-button teacher-font align-self-center" type="button">Eligir al azar</button>
+                    <!-- <button id="clear-dates-button" class="cherry-button-secondary teacher-font align-self-center">Limpiar citas</button> -->
                 </section>
             </div>
-            
-            <section id="cherry-dates-container">
-
-            </section>
+            <section id="cherry-dates-container"></section>
         </article>
     </main>
     <template id="date-envelope">
@@ -64,5 +62,11 @@
             <span id="date-title" class="teacher-font"></span>
         </div>
     </template>
+    <div id="modal-backdrop" class="d-flex justify-center align-items-center">
+        <div id="modal-content" class="">
+            <div id="picked-date-content" class="teacher-font">content</div>
+            <a role="button" id="close-modal" class="teacher-font" type="button">X</a>
+        </div>
+    </div>
 </body>
 </html>
