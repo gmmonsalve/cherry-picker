@@ -23,6 +23,7 @@ function renderAppContent(){
     const envelopeTemplate = document.getElementById("date-envelope");
     const appContent = document.getElementById("app-content");
     const modalClose = document.getElementById("close-modal");
+    const clearDatesButton = document.getElementById("clear-dates-button");
 
 
     removeHeaderComponent();
@@ -44,6 +45,10 @@ function renderAppContent(){
         console.log("closing modal");
         closeModal();
     });
+    clearDatesButton.addEventListener('click', () =>{
+         clearAllDates();
+         dateSection.innerHTML = "";
+    });
 }
 
 function renderSavedDates(envelopeTemplate, dateSection){
@@ -54,7 +59,6 @@ function renderSavedDates(envelopeTemplate, dateSection){
     });
     
 }
-
 
 function onAddDate(event, envelopeTemplate, dateSection){
     event.preventDefault();
@@ -92,4 +96,8 @@ function openModal(dateContent){
 function closeModal(){
     const modalBackdrop = document.getElementById("modal-backdrop");
     modalBackdrop.style.visibility = "hidden";
+}
+
+function clearAllDates(){
+    cherryPicker.store.clearStoredDates();
 }
