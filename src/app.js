@@ -24,6 +24,7 @@ function renderAppContent(){
     const appContent = document.getElementById("app-content");
     const modalClose = document.getElementById("close-modal");
     const clearDatesButton = document.getElementById("clear-dates-button");
+    const pickDateButton = document.getElementById("pick-date-button");
 
 
     removeHeaderComponent();
@@ -49,6 +50,7 @@ function renderAppContent(){
          clearAllDates();
          dateSection.innerHTML = "";
     });
+    pickDateButton.addEventListener('')
 }
 
 function renderSavedDates(envelopeTemplate, dateSection){
@@ -100,4 +102,10 @@ function closeModal(){
 
 function clearAllDates(){
     cherryPicker.store.clearStoredDates();
+}
+function getRandomDate(){
+    const storedDates = cherryPicker.store.getStoredDates();
+    if(storedDates.length === 0) return null;
+    const randomIndex = Math.floor(Math.random() * storedDates.length);
+    return storedDates[randomIndex];
 }

@@ -218,6 +218,7 @@ input.cherry-input + span{
   top: 5rem;
   right: 2rem;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #picked-date-content{
